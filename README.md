@@ -2,8 +2,8 @@
 
 ## User story
 As a user of the application
-I want to be able to register for an account, securely log in, and then create, read, update, and delete my data records
-So that I can manage my information effectively within the system.
+I want to be able to register for an account, securely log in, and then create, read, update, and delete posts
+So that I can manage the information effectively within the system.
 
 ## Getting Started
 
