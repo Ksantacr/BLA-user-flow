@@ -26,7 +26,11 @@
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7049",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "JWTKEY": "DhOrZJxIZY6fDu8u2hK30yN6LgX6GgYnJMsXcbsYQKgNwacVpa2ZxiuDRUC2CIBLcY3Y5N7TOnL",
+        "JWTISSUER": "https://localhost:7049",
+        "JWTAUDIENCE": "https://localhost:7049",
+        "BLACONNECTIONSTRING": "Host=localhost:5432;Username=postgres;Password=postgres;Database=bladb;"
       }
     },
     "IIS Express": {

@@ -11,6 +11,7 @@ COPY ["BLA.UserFlow.API/", "BLA.UserFlow.API/"]
 COPY ["BLA.UserFlow.Application/", "BLA.UserFlow.Application/"]
 COPY ["BLA.UserFlow.Core/", "BLA.UserFlow.Core/"]
 COPY ["BLA.UserFlow.Infrastructure/", "BLA.UserFlow.Infrastructure/"]
+COPY ["BLA.UserFlow.Tests/", "BLA.UserFlow.Tests/"]
 RUN dotnet restore -v d
 RUN dotnet build --no-restore -c $BUILD_CONFIGURATION -o /app/build
 

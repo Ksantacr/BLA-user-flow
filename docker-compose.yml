@@ -4,10 +4,10 @@
     container_name: bla-web-api
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_HOST: localhost:5432
-      DB_NAME: bla_user_db
+      JWTKEY: DhOrZJxIZY6fDu8u2hK30yN6LgX6GgYnJMsXcbsYQKgNwacVpa2ZxiuDRUC2CIBLcY3Y5N7TOnL
+      JWTISSUER: http://localhost:8080
+      JWTAUDIENCE: http://localhost:8080
+      BLACONNECTIONSTRING: Host=db_postgres;Username=postgres;Password=postgres;Database=bladb;
     ports:
       - "8080:8080"
     networks: 
@@ -19,13 +19,13 @@
     image: postgres:16.3
     restart: always 
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=bla_user_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bladb
     ports:
       - "5432:5432"
     volumes:
-      - ./init-scripts:/docker-entrypoint-initdb.d
+      - ./init-scripts/postgres:/docker-entrypoint-initdb.d
       - postgres_data:/var/lib/postgresql/data
     networks:
       - app-network
