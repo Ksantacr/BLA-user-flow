@@ -9,6 +9,7 @@ So that I can manage my information effectively within the system.
 
 This project use Postgres database and ADO.NET to the operations on the database.
 
+
 ## Clean architecture structure
     .
     ├── BLA.UserFlow.API                # presentation layer
@@ -21,6 +22,14 @@ Other folder
 
     .
     ├── init-scripts                    # database scripts
+
+### Run tests
+
+1. Ensure you have Docker running (https://docs.docker.com/engine/install/)
+
+```
+dotnet test
+```
 
 ### Prerequisites
 
@@ -36,14 +45,17 @@ http://localhost:8080/swagger/index.html
 ```
 4. Stop services
 ```
-docker-compose down
+docker-compose down -v
 ```
 
 ## API Endpoints
 
-| Method | Endpoint   | Description   |
-|--------|------------|---------------|
-| GET    | /api/users | Get all users |
-
-
-## Resources
+| Method | Endpoint           | Description          |
+|--------|--------------------|----------------------|
+| POST   | /api/auth/register | Register new account |
+| POST   | /api/auth/login    | Get Bearer token     |
+| POST   | /api/posts         | Create new post      |
+| GET    | /api/posts         | Create all posts     |
+| GET    | /api/posts/{id}    | Get specific post    |
+| PUT    | /api/posts/{id}    | Update a post        |
+| DELETE | /api/posts         | Delete a post        |
